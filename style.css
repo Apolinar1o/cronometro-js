@@ -1,0 +1,54 @@
+
+body {
+    background-image: linear-gradient(to right, #014040, #03A678);
+}
+section {
+    margin: auto;
+    text-align: center;
+}
+div {
+    text-align: center;
+    font-size: 60pt;
+    margin-top: 100px;
+    color: white;
+}
+button {
+    margin: auto;
+    text-align: center;
+    height: 50px;
+    width: 80px;
+    border-radius: 10px;
+    border: none;
+    transition:0.4s;
+}
+button#init {
+    background-color: rgb(72, 90, 223);
+    color: white;
+}
+button#init:hover {
+    background-color: rgb(39, 49, 126);
+    color: white;
+}
+button#pause {
+    background-color: rgb(221, 81, 81);
+    color: white;
+}button#pause:hover {
+    background-color: rgb(141, 53, 53);
+    color: white;
+}
+button#reini:hover {
+    background-color: rgb(165, 165, 165);
+}
+footer {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover {
+    color: rgb(149, 149, 149);
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronometro</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <section>
+        <div id="res">00:00</div>
+        <button id="init" onclick="INIT()">iniciar</button>
+        <button id="pause" onclick="STOP()">pausar</button>
+        <button id="reini" onclick="REINICIAR()">reiniciar</button>
+    </section>
+    <footer>
+        Feito porn <a href="https://github.com/Apolinar1o">Apolinar1o</a>
+    </footer>
+</body>
+<script>
+    let sec = 00
+    let min = 00
+    let hour = 00
+    let res = document.getElementById("res")
+    let interval
+    function INIT() {
+        interval = setInterval(WATCH, 1000)
+    }
+    function STOP(){
+        clearInterval(interval)
+       
+    }
+    function REINICIAR() {
+        clearInterval(interval)
+        sec=0
+        min=0
+        hour=0
+        document.getElementById('res').innerText = "00:00:00"
+    }
+    function WATCH() {
+        sec++
+        if(sec==60) {
+            min++
+            sec=0
+        } 
+        if(min==60) {
+            hour++
+            min=0
+        }
+         document.getElementById('res').innerText = hour+":"+min+":"+sec
+    }
+</script>
+</html>
